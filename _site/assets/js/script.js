@@ -42,6 +42,9 @@
 //animsition
   $('.animsition').animsition();
 
+//jquery plugin
+$("#contact").validate();
+
 //bootstrap validation
   (function() {
   'use strict';
