@@ -1,26 +1,47 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+---
+layout: default
+title: Home
+first: Back to School Special!
+second: 25% Off First Order
+---
+<main>
+  <!-- main slider -->
+  <div class="main-slider mb-3 mt-3">
+    <div class="first-slide ">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <title>Arely's Stationary Shop - Home</title>
-  </head>
-  <body class="jumbotron">
+      <div class="center">
+        <p class='text-center align-middle'>
+          {{ page.first }}
+        </p>
+      </div>
 
-    <!-- Main Content -->
-    <main>
-      <h1 class="display-1 text-center">Arely's Stationary Shop</h1>
-      <p class="lead text-center">Coming Soon!</p>
-    </main>
+    </div>
+    <div class='second-slide '>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  </body>
-</html>
+      <div class="center">
+        <p class='text-center justify-content-center'>
+          {{ page.second }}
+        </p>
+      </div>
+
+    </div>
+  </div>
+  <!-- /main slider -->
+  <!-- product slider -->
+  <p class="best-sell text-center lead text-light mt-3">
+    Best Sellers
+  </p>
+  {% assign sort_product = site.products | sort:"price" %}
+  <div class="slider dark-bg">
+    {% for product in sort_product %}
+      {% if product.slider == true %}
+      <div class="slide">
+        <a href="products.html">
+          <img src="{{ product.photo }}" alt="{{ product.name }}"/>
+        </a>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <!-- /product slider -->
+</main>

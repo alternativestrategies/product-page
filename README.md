@@ -13,9 +13,7 @@ Site should validate for HTML & CSS validity as well as WCAG 2.0 AA web accessib
 
 **Visual requirements:**
 * Colors, logo, fonts and icons are entirely up to you. Just try to make things neat and organized.
-
 * The site should use media queries to be responsive for tablet & desktop. One for less than 800 pixels and one for greater than 800 pixels. Set a max width so the site doesn’t look bad as the screen size widens. Bonus for small mobile..
-
 * Footer with social media links (can link to your personal pages)
 
 **JavaScript:**
